@@ -8,5 +8,8 @@ jobs:
        steps:
           - name: Displays the node version
             run: node -v
+            
+          - name: print hello world in pipeline 
+            run: echo "Hello-world"
           
 

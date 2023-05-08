@@ -1,0 +1,26 @@
+name: second pipeline example 
+
+on: workflow_dispatch
+
+jobs:
+   # this is the first job example in the pipeline 
+   second-pipeline-job1:
+          runs-on: ubuntu-latest
+          steps:
+             - name: Get code 
+               uses: actions/checkout@v3  # here the actions actually used to run the workflow it same as the runner instead of using the run we can use this in some cases
+             - name: check node version
+               uses: actions/setup-node@v3  # there is no need to use these command because there is already a nodejs installed in unbuntu-latest whh mentioned above.
+             - with:
+                 node-version: 18
+    # this is the second job example in the pipeline 
+   second-pipeline-job2:
+          runs-on: ubuntu-latest
+          steps:
+              - name: Get code 
+                uses: actions/checkout@v3  # here the actions actually used to run the workflow it same as the runner instead of using the run we can use this in some cases
+              - name: Install NodeJS
+                uses: actions/setup-node@v3  # there is no need to use these command because there is already a nodejs installed in unbuntu-latest whh mentioned above.
+              - with:
+                 node-version: 18
+   

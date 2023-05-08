@@ -1,0 +1,12 @@
+name: First-workflow
+
+on: workflow_dispatch
+
+jobs:
+  first_workflow_job:
+       runs-on: ubuntu-latest
+       steps:
+          - name: Displays the node version
+            run: node -v
+          
+

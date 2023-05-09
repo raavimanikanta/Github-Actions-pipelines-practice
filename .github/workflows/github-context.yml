@@ -1,0 +1,11 @@
+name: Example of the github context
+on:
+  workflow_dispatch:
+  
+jobs:
+  first_example_context:
+     name: "github-conext-example"
+     runs-on: ubuntu-latest
+     steps:
+        - name: output-github-context(expressions)
+          run: echo "${{ toJson(github) }}"

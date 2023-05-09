@@ -4,7 +4,7 @@ on:
   
 jobs:
   first_example_context:
-     name: "github-conext-example"
+     name: "github-context-example"
      runs-on: ubuntu-latest
      steps:
         - name: output-github-context(expressions)
